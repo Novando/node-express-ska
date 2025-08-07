@@ -1,0 +1,8 @@
+# IDE
+.idea
+
+# TS related
+node_modules
+.env
+dist
+log
