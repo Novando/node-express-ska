@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import {Logger} from "./util/logger.util";
 import {envConfig} from "./config/config.config";
+import {startRest} from "./bootstrap/rest.bootstrap";
 
 async function main () {
   Logger.init('./log/logfile')
@@ -9,6 +10,7 @@ async function main () {
   const app = express()
   app.use(express.json())
   app.use(cors())
+  app.use('/v1', startRest())
 
   const server = app.listen(envConfig.app.port, () => {})
   Logger.info(
