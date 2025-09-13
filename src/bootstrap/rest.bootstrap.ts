@@ -8,6 +8,7 @@ export function startRest(): express.Router {
   const lessonCtrl = new LessonHttp(lessonServ);
 
   const router = new RouteHttp()
+
   router.setLessonRoute(lessonCtrl)
 
   return router.getRouter();

@@ -9,6 +9,7 @@ export class Logger {
   constructor(filename: string) {
     const {combine, timestamp, uncolorize, colorize, printf} = winston.format
     const consoleFormat = printf((info) => `[${dayjs().toISOString()}] ${info.level}: ${info.message}`)
+
     this.log = winston.createLogger({
       format: colorize({colors: {
           info: 'blue',
