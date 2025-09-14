@@ -1,7 +1,6 @@
 import { Logger } from "../../utils/logger.util";
 import type { SampleRepository } from "./sample.repository";
 import { getAsyncLocalStorage } from "../../utils/local-storage.util";
-import type { CreateSampleDTO } from "../../models/dto/sample.dto";
 
 
 export async function deleteSampleRepository(this: SampleRepository, id: number) {

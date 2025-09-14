@@ -1,6 +1,6 @@
 import winston from 'winston'
 import dayjs from 'dayjs'
-import { getAllAsyncLocalStorage, getAsyncLocalStorage } from "./local-storage.util";
+import { getAllAsyncLocalStorage } from "./local-storage.util";
 
 
 export class Logger {
@@ -9,7 +9,7 @@ export class Logger {
 
   constructor(filename: string) {
     const {combine, timestamp, uncolorize, colorize, printf} = winston.format
-    const consoleFormat = printf((info) => `[${dayjs().toISOString()}] ${info.level}: ${info.message}`)
+    const consoleFormat = printf((info) => `[${dayjs().toISOString()}] ${info.level}: ${info.message as string}`)
 
     this.log = winston.createLogger({
       format: colorize({colors: {

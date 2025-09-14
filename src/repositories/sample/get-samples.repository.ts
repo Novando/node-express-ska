@@ -1,6 +1,6 @@
 import { Logger } from "../../utils/logger.util";
 import type { SampleRepository } from "./sample.repository";
-import { getAsyncLocalStorage, setAsyncLocalStorage } from "../../utils/local-storage.util";
+import { getAsyncLocalStorage } from "../../utils/local-storage.util";
 import type { SampleEntity } from "../../models/entity/sample.entity";
 import type { Pagination } from "../../models/dto/common.dto";
 

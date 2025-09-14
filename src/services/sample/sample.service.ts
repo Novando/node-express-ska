@@ -6,7 +6,6 @@ import { updateSampleService } from './update-sample.service';
 import type { SampleRepository } from "../../repositories/sample/sample.repository";
 import type { ItemRepository } from "../../repositories/item/item.repository";
 import type { Pool } from "pg";
-import { Logger } from "../../utils/logger.util";
 
 
 export class SampleService {
